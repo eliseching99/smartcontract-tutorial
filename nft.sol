@@ -20,7 +20,6 @@ contract TestEliseCash is ERC721, Ownable, RandomlyAssigned {
   uint256 public currentSupply = 0;  
   uint256 public maxSupply = 15;
   uint256 public nftPerAddressLimit = 3;
-  uint256 public maxMintAmount = 3;
   uint256 public cost = 0.0003 ether;
   mapping(address => bool) public whitelistedAddresses;
   mapping(address => uint256) public addressMintedBalance;
@@ -126,10 +125,6 @@ contract TestEliseCash is ERC721, Ownable, RandomlyAssigned {
     paused = _state;
   }
 
-  function setmaxMintAmount(uint256 _newmaxMintAmount) public onlyOwner {
-    maxMintAmount = _newmaxMintAmount;
-  }
-
   //Inputs: takes in list of addresses
   // 
   // function whitelistUsers(address[] calldata _users) public onlyOwner {
@@ -154,4 +149,4 @@ contract TestEliseCash is ERC721, Ownable, RandomlyAssigned {
 
 }
 
-// ["address1","address2"]
+// [""]

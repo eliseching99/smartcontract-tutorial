@@ -13,7 +13,7 @@ import "@1001-digital/erc721-extensions/contracts/RandomlyAssigned.sol";
 
 // EliseCash
 
-contract TestEliseCash is ERC721, Ownable, RandomlyAssigned {
+contract TestFirstEliseCash is ERC721, Ownable, RandomlyAssigned {
   using Strings for uint256;
   bool public paused = false;
   bool public onlyWhitelisted = true;
@@ -24,7 +24,7 @@ contract TestEliseCash is ERC721, Ownable, RandomlyAssigned {
   mapping(address => bool) public whitelistedAddresses;
   mapping(address => uint256) public addressMintedBalance;
   
-  string public baseURI = "https://gateway.pinata.cloud/ipfs/QmXrSwUxeX21zgWExkTUC3EuiHya5WY5Dk63ySMgfiTvqR";
+  string public baseURI = "https://ipfs.io/ipfs/QmeLiHtF85hbaSVfCvuETCrmGVn7QWzgy8zCLoCawrqJLR/";
 
   constructor() 
     ERC721("Elise Ching", "CHING")
